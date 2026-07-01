@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Karla Pérez | Impulsa</title>
+  <title>Karla Pérez | IMPULSA</title>
 
   <style>
     * {
@@ -13,11 +13,10 @@
 
     body {
       margin: 0;
-      padding: 24px 14px;
       min-height: 100vh;
+      padding: 24px 14px;
       background: #f2f2f2;
       font-family: Arial, Helvetica, sans-serif;
-      color: #555;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -25,101 +24,58 @@
 
     .tarjeta {
       width: 100%;
-      max-width: 470px;
+      max-width: 540px;
       background: #ffffff;
-      overflow: hidden;
       box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
-      text-align: center;
+      overflow: hidden;
     }
 
-    .foto {
+    .imagen-tarjeta {
       width: 100%;
-      height: 470px;
-      object-fit: cover;
-      object-position: center top;
+      height: auto;
       display: block;
-      background: #073742;
-    }
-
-    .contenido {
-      padding: 24px 28px 30px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 42px;
-      font-weight: 400;
-      line-height: 1.05;
-      color: #585858;
-    }
-
-    .puesto {
-      margin: 5px 0 25px;
-      font-size: 25px;
-      color: #777;
-    }
-
-    .datos {
-      display: grid;
-      gap: 12px;
-      margin-bottom: 23px;
-    }
-
-    .dato {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: #5d5d5d;
-      text-decoration: none;
-      font-size: 22px;
-      overflow-wrap: anywhere;
-    }
-
-    .icono {
-      width: 30px;
-      font-size: 25px;
-      color: #63268c;
     }
 
     .acciones {
       display: grid;
       gap: 12px;
+      padding: 20px;
     }
 
     .boton {
       width: 100%;
-      padding: 14px 18px;
+      padding: 15px 18px;
       border: none;
       border-radius: 4px;
-      background: #214f5d;
-      color: white;
+      color: #ffffff;
+      text-align: center;
       text-decoration: none;
       font-size: 18px;
+      font-weight: 600;
       cursor: pointer;
-      transition: transform 0.15s, opacity 0.15s;
     }
 
-    .boton:hover {
-      opacity: 0.92;
-      transform: translateY(-1px);
+    .guardar {
+      background: #bd8744;
     }
 
-    .boton-contacto {
-      background: #b9833e;
-    }
-
-    .boton-whatsapp {
+    .whatsapp {
       background: #198754;
     }
 
-    .pie {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #999;
+    .llamar {
+      background: #62258b;
     }
 
-    @media (max-width: 520px) {
+    .sitio {
+      background: #214f5d;
+    }
+
+    .boton:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 560px) {
       body {
         padding: 0;
         background: #ffffff;
@@ -130,22 +86,8 @@
         box-shadow: none;
       }
 
-      .foto {
-        height: 62vh;
-        max-height: 500px;
-        min-height: 390px;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-
-      .puesto {
-        font-size: 22px;
-      }
-
-      .dato {
-        font-size: 19px;
+      .acciones {
+        padding: 16px;
       }
     }
   </style>
@@ -156,65 +98,45 @@
   <main class="tarjeta">
 
     <img
-      class="foto"
+      class="imagen-tarjeta"
       src="karla.jpg"
-      alt="Fotografía de Karla Pérez"
+      alt="Tarjeta digital de Karla Pérez, Asesor de Ventas de IMPULSA"
     >
 
-    <section class="contenido">
+    <section class="acciones">
 
-      <img
-        class="logo"
-        src="logo.png"
-        alt="Impulsa"
+      <button
+        class="boton guardar"
+        type="button"
+        onclick="guardarContacto()"
       >
+        Guardar contacto
+      </button>
 
-      <h1>Karla Pérez</h1>
-      <p class="puesto">Asesor de Ventas</p>
+      <a
+        class="boton whatsapp"
+        href="https://wa.me/50239971562"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Contactar por WhatsApp
+      </a>
 
-      <div class="datos">
+      <a
+        class="boton llamar"
+        href="tel:+50239971562"
+      >
+        Llamar a Karla
+      </a>
 
-        <a class="dato" href="tel:+50239971562">
-          <span class="icono">☎</span>
-          <span>3997-1562</span>
-        </a>
-
-        <a class="dato" href="mailto:kperez@impulsa.com.gt">
-          <span class="icono">✉</span>
-          <span>kperez@impulsa.com.gt</span>
-        </a>
-
-      </div>
-
-      <div class="acciones">
-
-        <button class="boton boton-contacto" onclick="guardarContacto()">
-          Guardar contacto
-        </button>
-
-        <a
-          class="boton boton-whatsapp"
-          href="https://wa.me/50239971562"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Contactar por WhatsApp
-        </a>
-
-        <a
-          class="boton"
-          href="https://impulsa.com.gt"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visitar IMPULSA
-        </a>
-
-      </div>
-
-      <div class="pie">
-        IMPULSA
-      </div>
+      <a
+        class="boton sitio"
+        href="https://impulsa.com.gt"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Visitar IMPULSA
+      </a>
 
     </section>
 
@@ -247,7 +169,9 @@
       enlace.click();
       document.body.removeChild(enlace);
 
-      URL.revokeObjectURL(enlace.href);
+      setTimeout(() => {
+        URL.revokeObjectURL(enlace.href);
+      }, 1000);
     }
   </script>
 

@@ -108,57 +108,44 @@
       width: 12%;
       height: 5.2%;
     }
-    /* Botones reales encima de la imagen */
+    /* Botones reales blancos */
     .boton-real {
       position: absolute;
-      left: 15.2%;
-      width: 69.6%;
-      height: 6.4%;
-      z-index: 20;
+      left: 14%;
+      width: 72%;
+      height: 6.9%;
+      z-index: 30;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       text-decoration: none;
-      font-size: clamp(16px, 4vw, 23px);
+      font-size: clamp(15px, 4vw, 22px);
       letter-spacing: 1px;
       font-weight: 400;
-      cursor: pointer;
-      transition: all 0.22s ease;
       font-family: Arial, Helvetica, sans-serif;
-    }
-    .guardar-contacto {
-      top: 77.95%;
-      background: #bd8744;
-      color: #111111;
-      border: 2px solid #bd8744;
-      box-shadow: 0 8px 18px rgba(189, 135, 68, 0.18);
-    }
-    .guardar-contacto:hover {
-      background: #a97336;
-      border-color: #a97336;
-      color: #ffffff;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(189, 135, 68, 0.32);
-    }
-    .guardar-contacto:active {
-      transform: scale(0.98);
-    }
-    .visitar-impulsa {
-      top: 85.9%;
+      cursor: pointer;
       background: #ffffff;
       color: #111111;
-      border: 2px solid #bd8744;
-      box-shadow: 0 8px 18px rgba(189, 135, 68, 0.10);
+      border: 3px solid #bd8744;
+      box-shadow: none;
+      transition: all 0.22s ease;
     }
-    .visitar-impulsa:hover {
-      background: #bd8744;
-      color: #ffffff;
+    .guardar-contacto {
+      top: 77.45%;
+    }
+    .visitar-impulsa {
+      top: 85.55%;
+    }
+    .boton-real:hover {
+      background: #ffffff;
+      color: #111111;
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(189, 135, 68, 0.28);
+      box-shadow: 0 10px 22px rgba(189, 135, 68, 0.22);
     }
-    .visitar-impulsa:active {
+    .boton-real:active {
       transform: scale(0.98);
+      background: #ffffff;
     }
     @media (max-width: 600px) {
       .contenedor {

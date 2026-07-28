@@ -1,147 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Karla Pérez | IMPULSA</title>
-
   <style>
     * {
       box-sizing: border-box;
     }
-
     body {
       margin: 0;
       min-height: 100vh;
-      padding: 24px 14px;
       background: #f2f2f2;
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       justify-content: center;
       align-items: flex-start;
     }
-
+    .contenedor {
+      position: relative;
+      width: 100%;
+      max-width: 430px;
+      background: #ffffff;
+    }
     .tarjeta {
       width: 100%;
-      max-width: 540px;
-      background: #ffffff;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.14);
-      overflow: hidden;
-    }
-
-    .imagen-tarjeta {
-      width: 100%;
-      height: auto;
       display: block;
     }
-
-    .acciones {
-      display: grid;
-      gap: 12px;
-      padding: 20px;
-    }
-
-    .boton {
-      width: 100%;
-      padding: 15px 18px;
-      border: none;
-      border-radius: 4px;
-      color: #ffffff;
-      text-align: center;
+    .link-area {
+      position: absolute;
+      display: block;
+      z-index: 10;
       text-decoration: none;
-      font-size: 18px;
-      font-weight: 600;
       cursor: pointer;
     }
-
-    .guardar {
-      background: #bd8744;
-    }
-
+    /* Íconos sociales */
     .whatsapp {
-      background: #198754;
+      left: 14%;
+      top: 69%;
+      width: 11%;
+      height: 5%;
     }
-
-    .llamar {
-      background: #62258b;
+    .instagram {
+      left: 30%;
+      top: 69%;
+      width: 11%;
+      height: 5%;
     }
-
-    .sitio {
-      background: #214f5d;
+    .facebook {
+      left: 46%;
+      top: 69%;
+      width: 11%;
+      height: 5%;
     }
-
-    .boton:hover {
-      opacity: 0.9;
+    .tiktok {
+      left: 61%;
+      top: 69%;
+      width: 11%;
+      height: 5%;
     }
-
-    @media (max-width: 560px) {
-      body {
-        padding: 0;
-        background: #ffffff;
-      }
-
-      .tarjeta {
-        max-width: none;
-        box-shadow: none;
-      }
-
-      .acciones {
-        padding: 16px;
+    .telefono {
+      left: 77%;
+      top: 69%;
+      width: 11%;
+      height: 5%;
+    }
+    /* Botones inferiores */
+    .guardar-contacto {
+      left: 15%;
+      top: 78%;
+      width: 70%;
+      height: 6%;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+    .visitar-impulsa {
+      left: 15%;
+      top: 86%;
+      width: 70%;
+      height: 6%;
+    }
+    @media (max-width: 600px) {
+      .contenedor {
+        max-width: 100%;
       }
     }
   </style>
 </head>
-
 <body>
-
-  <main class="tarjeta">
-
+  <main class="contenedor">
     <img
-      class="imagen-tarjeta"
-      src="karla.jpg"
-      alt="Tarjeta digital de Karla Pérez, Asesor de Ventas de IMPULSA"
-    >
-
-    <section class="acciones">
-
-      <button
-        class="boton guardar"
-        type="button"
-        onclick="guardarContacto()"
-      >
-        Guardar contacto
-      </button>
-
-      <a
-        class="boton whatsapp"
-        href="https://wa.me/50239971562"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Contactar por WhatsApp
-      </a>
-
-      <a
-        class="boton llamar"
-        href="tel:+50239971562"
-      >
-        Llamar a Karla
-      </a>
-
-      <a
-        class="boton sitio"
-        href="https://impulsa.com.gt"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visitar IMPULSA
-      </a>
-
-    </section>
-
+      class="tarjeta"
+      src="tarjeta-karla.png"
+      alt="Tarjeta digital de Karla Pérez - IMPULSA"
+    />
+    <a
+      class="link-area whatsapp"
+      href="https://wa.me/50239971562"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="WhatsApp"
+    ></a>
+    <a
+      class="link-area instagram"
+      href="https://www.instagram.com/impulsa.gt/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram"
+    ></a>
+    <a
+      class="link-area facebook"
+      href="https://www.facebook.com/ImpulsaDesarrollos"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Facebook"
+    ></a>
+    <a
+      class="link-area tiktok"
+      href="https://www.tiktok.com/@impulsa.gt"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="TikTok"
+    ></a>
+    <a
+      class="link-area telefono"
+      href="tel:+50239971562"
+      aria-label="Llamar"
+    ></a>
+    <button
+      class="link-area guardar-contacto"
+      type="button"
+      onclick="guardarContacto()"
+      aria-label="Guardar contacto"
+    ></button>
+    <a
+      class="link-area visitar-impulsa"
+      href="https://impulsa.com.gt"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visitar IMPULSA"
+    ></a>
   </main>
-
   <script>
     function guardarContacto() {
       const vcard = [
@@ -156,24 +156,19 @@
         "URL:https://impulsa.com.gt",
         "END:VCARD"
       ].join("\r\n");
-
       const archivo = new Blob([vcard], {
         type: "text/vcard;charset=utf-8"
       });
-
       const enlace = document.createElement("a");
       enlace.href = URL.createObjectURL(archivo);
       enlace.download = "Karla-Perez.vcf";
-
       document.body.appendChild(enlace);
       enlace.click();
       document.body.removeChild(enlace);
-
       setTimeout(() => {
         URL.revokeObjectURL(enlace.href);
       }, 1000);
     }
   </script>
-
 </body>
 </html>

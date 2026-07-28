@@ -37,12 +37,12 @@
     .link-area::after {
       content: "";
       position: absolute;
-      inset: -6px;
+      inset: -3px;
       border-radius: 50%;
-      background: rgba(189, 135, 68, 0.18);
+      background: rgba(189, 135, 68, 0.16);
       border: 2px solid rgba(189, 135, 68, 0.75);
       opacity: 0;
-      transform: scale(0.85);
+      transform: scale(0.9);
       transition: all 0.2s ease;
       pointer-events: none;
     }
@@ -50,64 +50,64 @@
       opacity: 1;
       transform: scale(1);
     }
+    .link-area:active::after {
+      opacity: 1;
+      transform: scale(0.96);
+    }
     /* Íconos sociales */
     .whatsapp {
-      left: 14%;
-      top: 69%;
-      width: 11%;
-      height: 5%;
+      left: 14.7%;
+      top: 69.15%;
+      width: 9.5%;
+      height: 4.4%;
     }
     .instagram {
-      left: 30%;
-      top: 69%;
-      width: 11%;
-      height: 5%;
+      left: 30.6%;
+      top: 69.15%;
+      width: 9.5%;
+      height: 4.4%;
     }
     .facebook {
-      left: 46%;
-      top: 69%;
-      width: 11%;
-      height: 5%;
+      left: 46.1%;
+      top: 69.15%;
+      width: 9.5%;
+      height: 4.4%;
     }
     .tiktok {
-      left: 61%;
-      top: 69%;
-      width: 11%;
-      height: 5%;
+      left: 61.6%;
+      top: 69.15%;
+      width: 9.5%;
+      height: 4.4%;
     }
     .telefono {
-      left: 77%;
-      top: 69%;
-      width: 11%;
-      height: 5%;
+      left: 77.1%;
+      top: 69.15%;
+      width: 9.5%;
+      height: 4.4%;
     }
     /* Botón Guardar contacto */
     .guardar-contacto {
-      left: 15%;
-      top: 78%;
-      width: 70%;
-      height: 6%;
+      left: 15.4%;
+      top: 78.35%;
+      width: 69.2%;
+      height: 5.3%;
       background: transparent;
       border: none;
       padding: 0;
     }
     /* Botón Visitar IMPULSA */
     .visitar-impulsa {
-      left: 15%;
-      top: 86%;
-      width: 70%;
-      height: 6%;
+      left: 15.4%;
+      top: 86.1%;
+      width: 69.2%;
+      height: 5.3%;
     }
     .guardar-contacto::after,
     .visitar-impulsa::after {
-      border-radius: 8px;
+      border-radius: 4px;
       inset: 0;
-      background: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.16);
       border: 2px solid rgba(189, 135, 68, 0.9);
-    }
-    .link-area:active::after {
-      opacity: 1;
-      transform: scale(0.96);
     }
     @media (max-width: 600px) {
       .contenedor {

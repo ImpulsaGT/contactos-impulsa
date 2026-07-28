@@ -33,18 +33,29 @@
       z-index: 10;
       text-decoration: none;
       cursor: pointer;
+      background: transparent;
+      border: none;
+      padding: 0;
+      overflow: visible;
     }
+    /* Destello suave para íconos y botones */
     .link-area::after {
       content: "";
       position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background: rgba(189, 135, 68, 0.16);
-      border: 2px solid rgba(189, 135, 68, 0.75);
+      inset: -14px;
       opacity: 0;
-      transform: scale(0.9);
-      transition: all 0.2s ease;
       pointer-events: none;
+      border-radius: 999px;
+      background: radial-gradient(
+        circle,
+        rgba(189, 135, 68, 0.38) 0%,
+        rgba(189, 135, 68, 0.18) 35%,
+        rgba(189, 135, 68, 0.04) 65%,
+        rgba(189, 135, 68, 0) 100%
+      );
+      filter: blur(3px);
+      transform: scale(0.7);
+      transition: opacity 0.25s ease, transform 0.25s ease;
     }
     .link-area:hover::after {
       opacity: 1;
@@ -52,62 +63,71 @@
     }
     .link-area:active::after {
       opacity: 1;
-      transform: scale(0.96);
+      transform: scale(0.9);
     }
     /* Íconos sociales */
     .whatsapp {
-      left: 14.7%;
-      top: 69.15%;
-      width: 9.5%;
-      height: 4.4%;
+      left: 13.8%;
+      top: 68.8%;
+      width: 12%;
+      height: 5.2%;
     }
     .instagram {
-      left: 30.6%;
-      top: 69.15%;
-      width: 9.5%;
-      height: 4.4%;
+      left: 29.7%;
+      top: 68.8%;
+      width: 12%;
+      height: 5.2%;
     }
     .facebook {
-      left: 46.1%;
-      top: 69.15%;
-      width: 9.5%;
-      height: 4.4%;
+      left: 45.3%;
+      top: 68.8%;
+      width: 12%;
+      height: 5.2%;
     }
     .tiktok {
-      left: 61.6%;
-      top: 69.15%;
-      width: 9.5%;
-      height: 4.4%;
+      left: 60.9%;
+      top: 68.8%;
+      width: 12%;
+      height: 5.2%;
     }
     .telefono {
-      left: 77.1%;
-      top: 69.15%;
-      width: 9.5%;
-      height: 4.4%;
+      left: 76.4%;
+      top: 68.8%;
+      width: 12%;
+      height: 5.2%;
     }
     /* Botón Guardar contacto */
     .guardar-contacto {
-      left: 15.4%;
-      top: 78.35%;
-      width: 69.2%;
-      height: 5.3%;
-      background: transparent;
-      border: none;
-      padding: 0;
+      left: 15%;
+      top: 78%;
+      width: 70%;
+      height: 6.5%;
     }
     /* Botón Visitar IMPULSA */
     .visitar-impulsa {
-      left: 15.4%;
-      top: 86.1%;
-      width: 69.2%;
-      height: 5.3%;
+      left: 15%;
+      top: 85.9%;
+      width: 70%;
+      height: 6.5%;
     }
+    /* Destello más amplio para botones */
     .guardar-contacto::after,
     .visitar-impulsa::after {
-      border-radius: 4px;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.16);
-      border: 2px solid rgba(189, 135, 68, 0.9);
+      inset: -8px;
+      border-radius: 12px;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 40%,
+        rgba(189, 135, 68, 0.25) 55%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      filter: blur(1px);
+    }
+    .guardar-contacto:hover::after,
+    .visitar-impulsa:hover::after {
+      opacity: 1;
+      transform: scale(1.03);
     }
     @media (max-width: 600px) {
       .contenedor {

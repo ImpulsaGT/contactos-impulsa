@@ -77,7 +77,7 @@
       opacity: 1;
       transform: scale(0.9);
     }
-    /* Íconos sociales */
+    /* Áreas de íconos */
     .whatsapp {
       left: 13.8%;
       top: 68.8%;
@@ -108,32 +108,64 @@
       width: 12%;
       height: 5.2%;
     }
-    /* Botón Guardar contacto */
+    /* Botones reales encima de la imagen */
+    .boton-real {
+      position: absolute;
+      left: 15.2%;
+      width: 69.6%;
+      height: 6.4%;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      text-decoration: none;
+      font-size: clamp(16px, 4vw, 23px);
+      letter-spacing: 1px;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      font-family: Arial, Helvetica, sans-serif;
+    }
     .guardar-contacto {
-      left: 15%;
-      top: 78%;
-      width: 70%;
-      height: 6.5%;
+      top: 77.95%;
+      background: #bd8744;
+      color: #111111;
+      border: 2px solid #bd8744;
+      box-shadow: 0 8px 18px rgba(189, 135, 68, 0.18);
     }
-    /* Botón Visitar IMPULSA */
+    .guardar-contacto:hover {
+      background: #a97336;
+      border-color: #a97336;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(189, 135, 68, 0.32);
+    }
+    .guardar-contacto:active {
+      transform: scale(0.98);
+    }
     .visitar-impulsa {
-      left: 15%;
       top: 85.9%;
-      width: 70%;
-      height: 6.5%;
+      background: #ffffff;
+      color: #111111;
+      border: 2px solid #bd8744;
+      box-shadow: 0 8px 18px rgba(189, 135, 68, 0.10);
     }
-    /* Efecto limpio para botones */
-    .guardar-contacto:hover,
     .visitar-impulsa:hover {
-      background: rgba(255, 255, 255, 0.08);
+      background: #bd8744;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(189, 135, 68, 0.28);
     }
-    .guardar-contacto:active,
     .visitar-impulsa:active {
-      background: rgba(189, 135, 68, 0.10);
+      transform: scale(0.98);
     }
     @media (max-width: 600px) {
       .contenedor {
         max-width: 100%;
+      }
+      .boton-real {
+        font-size: 19px;
       }
     }
   </style>
@@ -179,18 +211,22 @@
       aria-label="Llamar"
     ></a>
     <button
-      class="link-area guardar-contacto"
+      class="boton-real guardar-contacto"
       type="button"
       onclick="guardarContacto()"
       aria-label="Guardar contacto"
-    ></button>
+    >
+      GUARDAR CONTACTO
+    </button>
     <a
-      class="link-area visitar-impulsa"
+      class="boton-real visitar-impulsa"
       href="https://impulsa.com.gt"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Visitar IMPULSA"
-    ></a>
+    >
+      VISITAR IMPULSA
+    </a>
   </main>
   <script>
     function guardarContacto() {

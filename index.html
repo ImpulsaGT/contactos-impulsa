@@ -38,8 +38,12 @@
       padding: 0;
       overflow: visible;
     }
-    /* Destello suave para íconos y botones */
-    .link-area::after {
+    /* Destello suave solo para íconos */
+    .whatsapp::after,
+    .instagram::after,
+    .facebook::after,
+    .tiktok::after,
+    .telefono::after {
       content: "";
       position: absolute;
       inset: -14px;
@@ -57,11 +61,19 @@
       transform: scale(0.7);
       transition: opacity 0.25s ease, transform 0.25s ease;
     }
-    .link-area:hover::after {
+    .whatsapp:hover::after,
+    .instagram:hover::after,
+    .facebook:hover::after,
+    .tiktok:hover::after,
+    .telefono:hover::after {
       opacity: 1;
       transform: scale(1);
     }
-    .link-area:active::after {
+    .whatsapp:active::after,
+    .instagram:active::after,
+    .facebook:active::after,
+    .tiktok:active::after,
+    .telefono:active::after {
       opacity: 1;
       transform: scale(0.9);
     }
@@ -110,24 +122,14 @@
       width: 70%;
       height: 6.5%;
     }
-    /* Destello más amplio para botones */
-    .guardar-contacto::after,
-    .visitar-impulsa::after {
-      inset: -8px;
-      border-radius: 12px;
-      background: linear-gradient(
-        120deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.35) 40%,
-        rgba(189, 135, 68, 0.25) 55%,
-        rgba(255, 255, 255, 0) 100%
-      );
-      filter: blur(1px);
+    /* Efecto limpio para botones */
+    .guardar-contacto:hover,
+    .visitar-impulsa:hover {
+      background: rgba(255, 255, 255, 0.08);
     }
-    .guardar-contacto:hover::after,
-    .visitar-impulsa:hover::after {
-      opacity: 1;
-      transform: scale(1.03);
+    .guardar-contacto:active,
+    .visitar-impulsa:active {
+      background: rgba(189, 135, 68, 0.10);
     }
     @media (max-width: 600px) {
       .contenedor {
